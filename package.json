@@ -1,0 +1,23 @@
+{
+  "name": "cpamm-teach",
+  "version": "1.0.0",
+  "description": "本地教学用双资产恒定乘积兑换池：整数报价、版本化提交与 SQLite 回放（仅 API 与 CLI）",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "bin": {
+    "cpamm": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/tests/",
+    "start": "node dist/cli.js serve",
+    "demo": "npm run build && node dist/cli.js demo"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
+}
